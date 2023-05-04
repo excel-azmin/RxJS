@@ -15,18 +15,52 @@ export class PromiseComponent  implements OnInit{
     //   rej("Promise is rejected");
     // })
 
-    let buyLaptop = new Promise((res, rej) => {
-      // res("Promise is resolved");
-      rej("Promise is rejected");
+    // let buyLaptop = new Promise((res, rej) => {
+    //   // res("Promise is resolved");
+    //   rej("Promise is rejected");
+    // })
+
+    // buyLaptop.then((res)=>{
+    //   console.log(res);
+    // }).catch(e =>{
+    //   console.log(e);
+    // })
+
+
+
+    // Async & Await
+
+    let newPromise = new Promise((resloved, rejecte) =>{
+      setTimeout(() => {
+        resloved("new Promise Resolved")
+      }, 2000)
     })
 
-    buyLaptop.then((res)=>{
-      console.log(res);
-    }).catch(e =>{
-      console.log(e);
-    })
+  async function getData() {
+    // return "Data Received";
+
+    let response = await newPromise;
+    console.log(response);
 
   }
+
+  // console.log(getData());
+
+  getData();
+
+
+
+
+
+
+
+
+
+
+  }
+
+
+
 
   // myFunction(){
   //   console.log("Funciton is called");
@@ -34,29 +68,35 @@ export class PromiseComponent  implements OnInit{
   // }
 
 
-  promiseCode = `
+  // promiseCode = `
   
-  // let buyLaptop = new Promise(function(res, rej){
-    //   // res("Promise is resolved");
-    //   rej("Promise is rejected");
-    // })
+  // // let buyLaptop = new Promise(function(res, rej){
+  //   //   // res("Promise is resolved");
+  //   //   rej("Promise is rejected");
+  //   // })
 
-    let buyLaptop = new Promise((res, rej) => {
-      // res("Promise is resolved");
-      rej("Promise is rejected");
-    })
+  //   let buyLaptop = new Promise((res, rej) => {
+  //     // res("Promise is resolved");
+  //     rej("Promise is rejected");
+  //   })
 
-    buyLaptop.then((res)=>{
-      console.log(res);
-    }).catch(e =>{
-      console.log(e);
-    })
+  //   buyLaptop.then((res)=>{
+  //     console.log(res);
+  //   }).catch(e =>{
+  //     console.log(e);
+  //   })
 
-  }
+  // }
 
-  // myFunction(){
-  //   console.log("Funciton is called");
+  // // myFunction(){
+  // //   console.log("Funciton is called");
 
-  // }`
+  // // }`
+
+
+
+  
+
+
 
 }
