@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './includes/header/header.component';
 import { FooterComponent } from './includes/footer/footer.component';
 import { PromiseComponent } from './promise/promise.component';
-import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
